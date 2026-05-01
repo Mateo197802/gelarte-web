@@ -85,18 +85,18 @@ const About = () => {
             {/* Founders */}
             <div className="pt-6 space-y-4">
               <div className="flex items-center gap-4">
-                <img src="/assets/JANNIS.jpeg" alt="Jannis Garzón" className="w-16 h-16 rounded-full object-cover border-2 border-gelarte-primary" />
+                <img src="/assets/JANNIS.jpeg" alt="Jannis Garzón" className="w-16 h-16 rounded-full object-cover object-bottom border-2 border-gelarte-primary" />
                 <div>
                   <p className="font-bold text-gelarte-dark text-lg">Jannis Garzón</p>
-                  <p className="text-gelarte-primary font-medium">Co-Fundadora · 0998016824</p>
+                  <p className="text-gelarte-primary font-medium">Fundadora · 0998016824</p>
                   <p className="text-gray-500 text-sm">jannisproano@gmail.com</p>
                 </div>
               </div>
               <div className="flex items-center gap-4">
-                <img src="/assets/DUENO1.jpeg" alt="Benjamín Chachalo" className="w-16 h-16 rounded-full object-cover border-2 border-gelarte-secondary" />
+                <img src="/assets/DUENO1.jpeg" alt="Benjamín Chachalo" className="w-16 h-16 rounded-full object-cover object-center border-2 border-gelarte-secondary" />
                 <div>
                   <p className="font-bold text-gelarte-dark text-lg">Benjamín Chachalo</p>
-                  <p className="text-gelarte-secondary font-medium">Co-Fundador · 0990264572</p>
+                  <p className="text-gelarte-secondary font-medium">Fundador · 0990264572</p>
                   <p className="text-gray-500 text-sm">j3en28@outlook.com</p>
                 </div>
               </div>
