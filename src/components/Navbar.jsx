@@ -14,10 +14,16 @@ const Navbar = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  const scrollTo = (id) => {
+    const el = document.getElementById(id);
+    if (el) el.scrollIntoView({ behavior: 'smooth' });
+    setMobileMenuOpen(false);
+  };
+
   const navLinks = [
-    { name: 'Nuestros Sabores', href: '#menu' },
-    { name: 'Sobre Nosotros', href: '#about' },
-    { name: 'Visítanos', href: '#visit' },
+    { name: 'Nuestros Sabores', id: 'menu' },
+    { name: 'Sobre Nosotros', id: 'about' },
+    { name: 'Visítanos', id: 'visit' },
   ];
 
   return (
@@ -31,7 +37,7 @@ const Navbar = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center">
           {/* Logo */}
-          <a href="#" className="flex items-center gap-2">
+          <button onClick={() => scrollTo('hero')} className="flex items-center gap-2">
             <motion.div
               whileHover={{ rotate: 10, scale: 1.1 }}
               transition={{ type: "spring", stiffness: 400, damping: 10 }}
@@ -41,23 +47,24 @@ const Navbar = () => {
             <span className="font-display font-bold text-2xl tracking-tighter text-gelarte-dark">
               GELARTE
             </span>
-          </a>
+          </button>
 
           {/* Desktop Menu */}
           <div className="hidden md:flex space-x-8 items-center">
             {navLinks.map((link) => (
-              <a
+              <button
                 key={link.name}
-                href={link.href}
+                onClick={() => scrollTo(link.id)}
                 className="font-medium text-gelarte-dark hover:text-gelarte-primary transition-colors relative group"
               >
                 {link.name}
                 <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gelarte-primary transition-all group-hover:w-full"></span>
-              </a>
+              </button>
             ))}
             <motion.button
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
+              onClick={() => scrollTo('visit')}
               className="bg-gelarte-primary text-white px-6 py-2 rounded-full font-semibold shadow-lg shadow-pastel-pink/50 hover:bg-pink-400 transition-colors"
             >
               Pedir Ahora
@@ -87,16 +94,18 @@ const Navbar = () => {
           >
             <div className="px-4 pt-2 pb-6 space-y-4 flex flex-col">
               {navLinks.map((link) => (
-                <a
+                <button
                   key={link.name}
-                  href={link.href}
-                  onClick={() => setMobileMenuOpen(false)}
-                  className="block px-3 py-2 text-lg font-medium text-gelarte-dark hover:text-gelarte-primary hover:bg-pastel-pink/10 rounded-lg"
+                  onClick={() => scrollTo(link.id)}
+                  className="block px-3 py-2 text-lg font-medium text-gelarte-dark hover:text-gelarte-primary hover:bg-pastel-pink/10 rounded-lg text-left"
                 >
                   {link.name}
-                </a>
+                </button>
               ))}
-              <button className="w-full mt-4 bg-gelarte-primary text-white px-6 py-3 rounded-full font-semibold shadow-md">
+              <button
+                onClick={() => scrollTo('visit')}
+                className="w-full mt-4 bg-gelarte-primary text-white px-6 py-3 rounded-full font-semibold shadow-md"
+              >
                 Pedir Ahora
               </button>
             </div>

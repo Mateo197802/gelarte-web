@@ -2,9 +2,14 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { ArrowRight, Star } from 'lucide-react';
 
+const scrollTo = (id) => {
+  const el = document.getElementById(id);
+  if (el) el.scrollIntoView({ behavior: 'smooth' });
+};
+
 const Hero = () => {
   return (
-    <section className="relative min-h-screen flex items-center pt-20 overflow-hidden bg-gradient-to-b from-pastel-vanilla/50 to-white">
+    <section id="hero" className="relative min-h-screen flex items-center pt-20 overflow-hidden bg-gradient-to-b from-pastel-vanilla/50 to-white">
       {/* Background decoration elements */}
       <div className="absolute top-20 left-10 w-64 h-64 bg-pastel-pink/30 rounded-full mix-blend-multiply filter blur-3xl opacity-70 animate-blob"></div>
       <div className="absolute top-40 right-10 w-72 h-72 bg-pastel-mint/30 rounded-full mix-blend-multiply filter blur-3xl opacity-70 animate-blob animation-delay-2000"></div>
@@ -31,9 +36,10 @@ const Hero = () => {
             </motion.div>
             
             <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold tracking-tight text-gelarte-dark mb-6 leading-tight">
-              El arte de hacer <br className="hidden lg:block"/>
+              Sabores que{' '}
+              <br className="hidden lg:block"/>
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-gelarte-primary to-pink-400">
-                helado perfecto
+                enamoran el alma
               </span>
             </h1>
             
@@ -45,6 +51,7 @@ const Hero = () => {
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
+                onClick={() => scrollTo('menu')}
                 className="flex items-center justify-center gap-2 bg-gelarte-dark text-white px-8 py-4 rounded-full font-semibold text-lg hover:bg-black transition-colors shadow-xl shadow-black/10"
               >
                 Ver Sabores
@@ -54,6 +61,7 @@ const Hero = () => {
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
+                onClick={() => scrollTo('about')}
                 className="flex items-center justify-center bg-white text-gelarte-dark border-2 border-transparent hover:border-pastel-pink px-8 py-4 rounded-full font-semibold text-lg transition-all shadow-md"
               >
                 Nuestra Historia

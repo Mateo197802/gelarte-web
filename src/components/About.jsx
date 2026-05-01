@@ -35,7 +35,7 @@ const About = () => {
               transition={{ duration: 0.6 }}
               className="absolute top-0 left-0 w-64 h-80 rounded-2xl overflow-hidden shadow-2xl z-20"
             >
-              <img src="/assets/DUEÑOS.jpeg" alt="Dueños de GELARTE" className="w-full h-full object-cover" />
+              <img src="/assets/DUEÑOS.jpeg" alt="Jannis y Benjamín, fundadores de GELARTE" className="w-full h-full object-cover" />
             </motion.div>
             
             <motion.div 
@@ -45,7 +45,7 @@ const About = () => {
               transition={{ duration: 0.6, delay: 0.2 }}
               className="absolute bottom-10 left-32 w-72 h-64 rounded-2xl overflow-hidden shadow-2xl z-30 border-4 border-white"
             >
-              <img src="/assets/HELADERIA.jpeg" alt="Interior Heladería" className="w-full h-full object-cover" />
+              <img src="/assets/HELADERIA.jpeg" alt="Interior Heladería GELARTE" className="w-full h-full object-cover" />
             </motion.div>
             
             <motion.div 
@@ -55,13 +55,13 @@ const About = () => {
               transition={{ duration: 0.6, delay: 0.4 }}
               className="absolute top-20 right-0 w-64 h-80 rounded-2xl overflow-hidden shadow-2xl z-10"
             >
-              <img src="/assets/HELADERIA POR FUERA.jpeg" alt="Exterior Heladería" className="w-full h-full object-cover" />
+              <img src="/assets/HELADERIA POR FUERA.jpeg" alt="Exterior Heladería GELARTE" className="w-full h-full object-cover" />
             </motion.div>
           </div>
 
-          {/* Mobile Single Image (Fallback for small screens) */}
+          {/* Mobile Single Image */}
           <div className="md:hidden rounded-2xl overflow-hidden shadow-xl mb-8">
-             <img src="/assets/DUEÑOS.jpeg" alt="Dueños de GELARTE" className="w-full h-auto" />
+             <img src="/assets/DUEÑOS.jpeg" alt="Jannis y Benjamín, fundadores de GELARTE" className="w-full h-auto" />
           </div>
 
           {/* Text Content */}
@@ -76,18 +76,28 @@ const About = () => {
               Pasión por lo dulce, <span className="text-gelarte-primary">amor por el arte</span>.
             </h3>
             <p className="text-gray-600 text-lg leading-relaxed">
-              GELARTE nació de un sueño compartido: llevar la verdadera experiencia del helado artesanal a cada rincón. Cada sabor que creamos es una obra de arte, elaborada con ingredientes seleccionados meticulosamente y recetas perfeccionadas con el tiempo.
+              GELARTE nació de un sueño compartido entre Jannis Garzón y Benjamín Chachalo: llevar la verdadera experiencia del helado artesanal a Ibarra. Cada sabor que creamos es una obra de arte, elaborada con ingredientes seleccionados meticulosamente y recetas perfeccionadas con el tiempo.
             </p>
             <p className="text-gray-600 text-lg leading-relaxed">
               No somos solo una heladería; somos un espacio para compartir, sonreír y crear recuerdos. Desde nuestro local vibrante y acogedor hasta cada cono que servimos, buscamos transmitir esa alegría pura que solo un buen helado puede brindar.
             </p>
             
-            <div className="pt-6">
+            {/* Founders */}
+            <div className="pt-6 space-y-4">
               <div className="flex items-center gap-4">
-                <img src="/assets/DUEÑO 1.jpeg" alt="Fundador" className="w-16 h-16 rounded-full object-cover border-2 border-gelarte-primary" />
+                <img src="/assets/DUEÑO 1.jpeg" alt="Jannis Garzón" className="w-16 h-16 rounded-full object-cover border-2 border-gelarte-primary" />
                 <div>
-                  <p className="font-bold text-gelarte-dark text-lg">Fundadores de GELARTE</p>
-                  <p className="text-gelarte-primary font-medium">Maestros Heladeros</p>
+                  <p className="font-bold text-gelarte-dark text-lg">Jannis Garzón</p>
+                  <p className="text-gelarte-primary font-medium">Co-Fundadora · 0998016824</p>
+                  <p className="text-gray-500 text-sm">jannisproano@gmail.com</p>
+                </div>
+              </div>
+              <div className="flex items-center gap-4">
+                <img src="/assets/DUEÑOS.jpeg" alt="Benjamín Chachalo" className="w-16 h-16 rounded-full object-cover border-2 border-gelarte-secondary" />
+                <div>
+                  <p className="font-bold text-gelarte-dark text-lg">Benjamín Chachalo</p>
+                  <p className="text-gelarte-secondary font-medium">Co-Fundador · 0990264572</p>
+                  <p className="text-gray-500 text-sm">j3en28@outlook.com</p>
                 </div>
               </div>
             </div>
